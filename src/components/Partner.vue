@@ -1,12 +1,101 @@
 <template>
- <div class="">
- </div>
+  <div class="partner-card">
+    <div class="img-container">
+      <q-img :src="`/imgs/partners/${img}`"
+             class="main"
+             :alt="img"
+             fit="scale-down"
+      />
+      <q-img src="/imgs/partners/border-card.svg"
+             class="border-card"
+             alt="border-card"
+      />
+    </div>
+    <q-expansion-item
+      dense
+      label="Afla mai multe">
+      <q-card>
+        <q-card-section v-html="text" />
+      </q-card>
+    </q-expansion-item>
+  </div>
 </template>
 
 <script setup>
+
+const props = defineProps({
+  img: String,
+  text: String
+})
 </script>
 
 <style lang="scss">
-
-
+.partner-card {
+  max-width: 360px;
+  .img-container {
+    position: relative;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .border-card {
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+    .main {
+      z-index: 2;
+      position: absolute;
+    }
+  }
+  .q-expansion-item.q-expansion-item--expanded {
+    .q-expansion-item__container {
+      .q-item {
+        .q-item__label {
+          font-size: 16px;
+          color: #ff41ff;
+          font-weight: bold;
+        }
+        .q-icon {
+          font-size: 30px;
+          color: #ff41ff;
+        }
+      }
+    }
+  }
+  .q-expansion-item {
+    z-index: 3;
+    position: relative;
+    .q-expansion-item__container {
+      .q-item:hover .q-focus-helper {
+        background: unset;
+      }
+      .q-item {
+        .q-item__section {
+          flex: unset;
+        }
+        .q-item__label {
+          font-size: 16px;
+          color: #BEBEBE;
+          font-weight: bold;
+        }
+        .q-icon {
+          font-size: 30px;
+          color: #BEBEBE;
+        }
+        .q-item__section--side {
+          padding-left: 10px;
+        }
+      }
+    }
+    .q-card {
+      background: unset;
+      .q-card__section {
+        color: $primary;
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+  }
+}
 </style>
