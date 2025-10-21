@@ -11,10 +11,11 @@
     "build": "quasar build"
   },
   "dependencies": {
+    "@quasar/extras": "^1.16.4",
     "axios": "^1.2.1",
     "pinia": "^3.0.1",
-    "@quasar/extras": "^1.16.4",
     "quasar": "^2.16.0",
+    "sharp": "^0.34.4",
     "vue": "^3.5.22",
     "vue-router": "^4.0.0"
   },

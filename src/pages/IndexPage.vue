@@ -38,7 +38,7 @@
           <Partner
             v-for="({text}, index) in listPartners"
             :key="`${index}-partner`"
-            :img="`Cal_0${index + 1}.png`"
+            :img="`Cal_0${index + 1}.webp`"
             :text="text"
           />
         </div>

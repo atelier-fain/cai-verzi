@@ -16,8 +16,8 @@ import Footer from 'components/Footer.vue';
 
 <style lang="scss">
 .q-layout {
-  background-image: url('../assets/fundal.webp');
+  background-image: url('../assets/f.png');
   background-repeat: repeat;
-  background-size: contain;
+  background-size: auto;
 }
 </style>
