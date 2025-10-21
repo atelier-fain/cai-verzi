@@ -49,6 +49,7 @@
         <q-img
           src="../assets/horse-1.svg"
           alt="horse"
+          class="left-img"
         />
         <div>
           <span class="text-h3 text-secondary text-center">Fii la curent cu noi locuri în care poți observa Cai Verzi.</span>
@@ -227,7 +228,7 @@ const listPartners = ref([
 const s5_list = ref([
   {
     label: 'Harta fizică',
-    content: `Ce-i în mână, nu-i virtual! Descarcă harta noastră cu spațiile în care puteți lua urma Cailor Verzi. Ce puteți face cu ea: <br><br>
+    content: `Ce-i în mână, nu-i virtual! <a href="/CaiVerzi_Harta_A4.pdf" download>Descarcă harta noastră</a> cu spațiile în care puteți lua urma Cailor Verzi. Ce puteți face cu ea: <br><br>
      1. Folosiți-o că instrument de orientare sau de planificare a noi excursii culturale. <br><br>
      2. Marcați pe ea locurile pe care le-ați vizitat (cu ștampila de la muzeu, dar merge și cu un sticker, un pin sau cu un cal desenat de o mână talentată). <br><br>
      3. Alternativ, puteți afișă harta în format mare la scoală. Faceți-vă selfie-uri cu ce v-a plăcut mai mult din vizita voastră, printați-le și înfigeți-le cu un pin în hartă.<br><br>
@@ -236,7 +237,7 @@ const s5_list = ref([
   {
     label: 'Colecționează Cai Verzi!',
     content: `Cel mai bun suvenir: un pașaport plin de ștampile! <br><br>
-    1. Downloadați-vǎ pasapoartele culturale și printați-le pentru toatǎ clasa! <br><br>
+    1. <a href="/booklet A6 CaiVerzi DTP tipar.pdf" download>Downloadați-vǎ pasapoartele culturale</a> și printați-le pentru toatǎ clasa! <br><br>
     2. Sau spune-le elevilor tai să vină îmbrăcați cu un tricou deschis la culoare (poate fi și o șapcă). <br><br>
     3. La muzeu, teatru, galerie sau casă memoraiala, veți gǎsi o ștampilă cu Calul Verde al fiecărei destinații. <br><br>
     4. Aplicați-o pe pașapoartele voastre sau personalizați-vă cu ea ținuta de explorator cultural! <br><br>
@@ -372,6 +373,17 @@ function handleButton (action) {
         margin: 0 auto;
       }
     }
+    @media only screen and (max-width: 1200px) {
+      padding: 40px;
+    }
+    @media only screen and (max-width: 768px) {
+      padding: 40px 0;
+      .container {
+        .middle {
+          margin: 20px 0;
+        }
+      }
+    }
   }
   .s2 {
     padding: 98px 0;
@@ -380,6 +392,7 @@ function handleButton (action) {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 20px;
         .text {
           h2 {
             color: $primary;
@@ -390,7 +403,7 @@ function handleButton (action) {
           }
         }
         .map {
-          width: 835px;
+          width: 100%;
           height: 439px;
           background-color: #e3e3e3;
           display: flex;
@@ -399,15 +412,43 @@ function handleButton (action) {
           color: grey;
           font-size: 40px;
         }
-
       }
       .list-cards {
         margin: 100px 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         gap: 40px;
       }
-
+    }
+    @media only screen and (max-width: 1650px) {
+        .container {
+          .list-cards {
+            justify-content: center;
+          }
+        }
+    }
+    @media only screen and (max-width: 1200px) {
+      padding: 60px 0;
+      .container {
+        .top {
+          flex-direction: column;
+          .text {
+            h2 {
+              text-align: center;
+            }
+            .subtitle {
+              text-align: center;
+            }
+          }
+        }
+        .list-cards {
+          gap: 40px;
+          margin: 60px 0;
+          grid-template-columns: 1fr 1fr;
+          justify-items: center;
+        }
+      }
     }
   }
   .s3 {
@@ -441,6 +482,27 @@ function handleButton (action) {
         padding: 4px 16px;
         .q-btn__content {
           font-size: 16px;
+        }
+      }
+    }
+    @media only screen and (max-width: 1440px) {
+        .container {
+          .q-img {
+            max-width: 300px;
+          }
+        }
+    }
+    @media only screen and (max-width: 1200px) {
+      padding: 40px 0;
+    }
+    @media only screen and (max-width: 1024px) {
+      .container {
+        flex-direction: column-reverse;
+        .q-img {
+          max-width: 200px;
+        }
+        .left-img {
+          display: none;
         }
       }
 
@@ -488,7 +550,7 @@ function handleButton (action) {
           }
         }
         .map {
-          width: 835px;
+          width: 100%;
           height: 439px;
           background-color: #e3e3e3;
           display: flex;
@@ -520,6 +582,56 @@ function handleButton (action) {
         }
       }
     }
+    @media only screen and (max-width: 1200px) {
+      padding: 60px 0;
+      .container {
+        .top {
+          flex-direction: column;
+          .text {
+            margin-bottom: 20px;
+            .q-btn {
+              margin: 0 auto;
+              display: flex;
+            }
+            h2 {
+              text-align: center;
+            }
+            .subtitle {
+              text-align: center;
+            }
+          }
+        }
+        .bottom {
+          margin-top: 60px;
+          > div {
+            > h2 {
+              margin-bottom: 20px;
+            }
+          }
+          .exp-section {
+            margin-top: 40px;
+            .text-h1 {
+              margin-bottom: 30px;
+            }
+            .list-exp {
+              gap: 20px;
+            }
+          }
+        }
+      }
+    }
+    @media only screen and (max-width: 768px) {
+      .container {
+        .bottom {
+          .exp-section {
+            .list-exp {
+              flex-direction: column;
+            }
+          }
+        }
+      }
+
+    }
   }
   .s6 {
     background-color: $primary;
@@ -549,12 +661,27 @@ function handleButton (action) {
         gap: 36px;
       }
     }
+    @media only screen and (max-width: 1200px) {
+      padding: 60px 0;
+    }
+    @media only screen and (max-width: 768px) {
+      .container {
+        .list-exp {
+          flex-direction: column;
+          gap: 20px;
+        }
+        .p-section {
+          margin: 0 auto 40px 0;
+
+        }
+      }
+    }
   }
   .s7 {
     padding: 60px 0;
     .container {
       .top {
-        margin-bottom: 30px;
+        margin-bottom: 40px;
         > h2 {
           margin-bottom: 33px;
         }
@@ -576,6 +703,16 @@ function handleButton (action) {
         > p {
           max-width: 720px;
           margin: 0 auto;
+        }
+      }
+    }
+    @media only screen and (max-width: 768px) {
+      .container {
+        .top {
+          .list-exp {
+            flex-direction: column;
+            gap: 20px;
+          }
         }
       }
     }
@@ -602,6 +739,17 @@ function handleButton (action) {
       gap: 166px;
       .q-img {
         max-width: 930px;
+      }
+    }
+    @media only screen and (max-width: 1200px) {
+      padding: 60px 0;
+      .container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        .q-img {
+          max-width: 80%;
+        }
       }
     }
   }

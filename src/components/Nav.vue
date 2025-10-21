@@ -21,5 +21,12 @@
     display: flex;
     max-width: 290px;
   }
+  @media only screen and (max-width: 1200px) {
+    padding: 40px 0 0 0;
+    .logo {
+      max-width: 200px;
+    }
+
+  }
 }
 </style>

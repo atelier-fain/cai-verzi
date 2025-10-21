@@ -20,6 +20,9 @@ const props = defineProps({
 
 <style lang="scss">
 .expansion-comp.primary {
+  a[href] {
+    color: $secondary;
+  }
   background-color: $primary;
   .q-expansion-item__content > .q-card {
     background-color: $primary;
@@ -83,6 +86,45 @@ const props = defineProps({
         font-weight: bold;
       }
     }
+  }
+  @media only screen and (max-width: 1200px) {
+    .q-expansion-item__container {
+      .q-expansion-item__content > .q-card {
+        .q-card__section {
+          font-size: 16px;
+        }
+      }
+      .q-item {
+        .q-icon {
+          font-size: 28px;
+        }
+        .q-item__label {
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+    }
+
+  }
+  @media only screen and (max-width: 768px) {
+    .q-expansion-item__container {
+      .q-expansion-item__content > .q-card {
+        .q-card__section {
+          font-size: 14px;
+        }
+      }
+      .q-item {
+        justify-content: space-between;
+        .q-icon {
+          font-size: 20px;
+        }
+        .q-item__label {
+          font-size: 16px;
+          font-weight: bold;
+        }
+      }
+    }
+
   }
 }
 </style>

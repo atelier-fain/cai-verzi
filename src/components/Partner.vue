@@ -31,7 +31,7 @@ const props = defineProps({
 
 <style lang="scss">
 .partner-card {
-  max-width: 360px;
+  width: 360px;
   .img-container {
     position: relative;
     padding: 10px;
@@ -96,6 +96,16 @@ const props = defineProps({
         font-weight: 500;
       }
     }
+  }
+  @media only screen and (max-width: 1024px) {
+    width: 280px;
+    .img-container {
+      .main {
+        max-height: 320px;
+      }
+
+    }
+
   }
 }
 </style>

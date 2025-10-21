@@ -16,8 +16,8 @@ import Footer from 'components/Footer.vue';
 
 <style lang="scss">
 .q-layout {
-  background-image: url('../assets/fundal.svg');
-  background-repeat: repeat;
-  background-size: auto;
+  //background-image: url('../assets/fundal_1.svg');
+  //background-repeat: repeat;
+  //background-size: auto;
 }
 </style>
