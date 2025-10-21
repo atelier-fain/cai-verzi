@@ -230,7 +230,7 @@ const listPartners = ref([
 const s5_list = ref([
   {
     label: 'Harta fizică',
-    content: `Ce-i în mână, nu-i virtual! <a :href="${IMGS_BASE_URL}/CaiVerzi_Harta_A4.pdf" download>Descarcă harta noastră</a> cu spațiile în care puteți lua urma Cailor Verzi. Ce puteți face cu ea: <br><br>
+    content: `Ce-i în mână, nu-i virtual! <a href="${IMGS_BASE_URL}/CaiVerzi_Harta_A4.pdf" download>Descarcă harta noastră</a> cu spațiile în care puteți lua urma Cailor Verzi. Ce puteți face cu ea: <br><br>
      1. Folosiți-o că instrument de orientare sau de planificare a noi excursii culturale. <br><br>
      2. Marcați pe ea locurile pe care le-ați vizitat (cu ștampila de la muzeu, dar merge și cu un sticker, un pin sau cu un cal desenat de o mână talentată). <br><br>
      3. Alternativ, puteți afișă harta în format mare la scoală. Faceți-vă selfie-uri cu ce v-a plăcut mai mult din vizita voastră, printați-le și înfigeți-le cu un pin în hartă.<br><br>
@@ -239,7 +239,7 @@ const s5_list = ref([
   {
     label: 'Colecționează Cai Verzi!',
     content: `Cel mai bun suvenir: un pașaport plin de ștampile! <br><br>
-    1. <a :href="${IMGS_BASE_URL}/booklet A6 CaiVerzi DTP tipar.pdf" download>Downloadați-vǎ pasapoartele culturale</a> și printați-le pentru toatǎ clasa! <br><br>
+    1. <a href="${IMGS_BASE_URL}/booklet A6 CaiVerzi DTP tipar.pdf" download>Downloadați-vǎ pasapoartele culturale</a> și printați-le pentru toatǎ clasa! <br><br>
     2. Sau spune-le elevilor tai să vină îmbrăcați cu un tricou deschis la culoare (poate fi și o șapcă). <br><br>
     3. La muzeu, teatru, galerie sau casă memoraiala, veți gǎsi o ștampilă cu Calul Verde al fiecărei destinații. <br><br>
     4. Aplicați-o pe pașapoartele voastre sau personalizați-vă cu ea ținuta de explorator cultural! <br><br>
