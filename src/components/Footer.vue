@@ -31,7 +31,7 @@
           <q-img
             v-for="img in logosPartners"
             :key="img"
-            :src="`/${img}`"
+            :src="`${IMGS_BASE_URL}/${img}`"
             :alt="img"
           />
         </div>
@@ -41,6 +41,7 @@
 </template>
 
 <script setup>
+import { IMGS_BASE_URL } from '../boot/axios.js';
 
 import {ref} from 'vue'
 

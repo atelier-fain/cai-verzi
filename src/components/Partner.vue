@@ -1,12 +1,12 @@
 <template>
   <div class="partner-card">
     <div class="img-container">
-      <q-img :src="`/${img}`"
+      <q-img :src="`${IMGS_BASE_URL}/${img}`"
              class="main"
              :alt="img"
              fit="scale-down"
       />
-      <q-img src="/imgs/partners/border-card.svg"
+      <q-img src="../assets/border-card.svg"
              class="border-card"
              alt="border-card"
       />
@@ -22,6 +22,7 @@
 </template>
 
 <script setup>
+import { IMGS_BASE_URL } from '../boot/axios.js';
 
 const props = defineProps({
   img: String,
