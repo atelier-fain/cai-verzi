@@ -39,9 +39,9 @@ export default defineConfig((/* ctx */) => {
 
       // rebuildCache: true, // rebuilds Vite/linter/etc cache on startup
 
-      // publicPath: process.env.NODE_ENV === 'production'
-      //   ? '/cai-verzi/'
-      //   : '/',
+      publicPath: process.env.NODE_ENV === 'production'
+        ? '/cai-verzi/'
+        : '/',
       // analyze: true,
       // env: {},
       // rawDefine: {}
