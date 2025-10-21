@@ -31,7 +31,7 @@
           <q-img
             v-for="img in logosPartners"
             :key="img"
-            :src="`/imgs/logos-partners/${img}`"
+            :src="`/${img}`"
             :alt="img"
           />
         </div>

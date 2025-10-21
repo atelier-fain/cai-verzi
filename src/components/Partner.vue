@@ -1,7 +1,7 @@
 <template>
   <div class="partner-card">
     <div class="img-container">
-      <q-img :src="`/imgs/partners/${img}`"
+      <q-img :src="`/${img}`"
              class="main"
              :alt="img"
              fit="scale-down"
