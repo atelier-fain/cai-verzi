@@ -63,6 +63,7 @@ const logosPartners = ref([
 
 <style lang="scss">
 .footer {
+  padding-bottom: 40px;
   .container {
     display: flex;
     flex-direction: column;

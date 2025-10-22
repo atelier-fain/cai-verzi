@@ -18,6 +18,6 @@ import Footer from 'components/Footer.vue';
 .q-layout {
   background-image: url('../assets/f.png');
   background-repeat: repeat;
-  background-size: auto;
+  background-size: contain;
 }
 </style>
