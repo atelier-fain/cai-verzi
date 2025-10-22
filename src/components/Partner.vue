@@ -108,5 +108,9 @@ const props = defineProps({
     }
 
   }
+  @media only screen and (max-width: 655px) {
+    width: 360px;
+
+  }
 }
 </style>

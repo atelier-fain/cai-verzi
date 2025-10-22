@@ -19,5 +19,9 @@ import Footer from 'components/Footer.vue';
   background-image: url('../assets/f.png');
   background-repeat: repeat;
   background-size: contain;
+  @media only screen and (max-width: 768px) {
+    background-size: 200%;
+
+  }
 }
 </style>
