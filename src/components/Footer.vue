@@ -2,7 +2,7 @@
   <div class="footer">
     <div class="container">
       <div class="top">
-        <span><span>CAPITALA CULTURALĂ</span><br><span>A CAPITALEI</span></span>
+        <span><span class="nowrap">CAPITALA CULTURALĂ</span><br><span>A CAPITALEI</span></span>
         <div class="list">
           <div>
             <span>Un proiect</span>
@@ -18,9 +18,10 @@
           </div>
           <div>
             <span>Parteneri</span>
-            <div class="flex">
+            <div class="flex wrap items-center">
               <q-img width="100px" src="../assets/bt-logo.svg" alt="bt"/>
               <q-img src="../assets/asap.svg" alt="asap"/>
+              <q-img src="../assets/Logo UB orizontal NA.svg" alt="ub"/>
             </div>
           </div>
         </div>
@@ -71,7 +72,12 @@ const logosPartners = ref([
     .top {
       display: flex;
       align-items: center;
-      gap: 80px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      .nowrap {
+        white-space: nowrap;
+      }
       > span {
         font-size: 20px;
         font-weight: 700;
@@ -79,12 +85,10 @@ const logosPartners = ref([
       > .list {
         display: flex;
         align-items: center;
-        gap: 20px;
-        width: 100%;
-        justify-content: space-between;
-        > span {
+        gap: 40px;
+        > div > span {
           font-size: 16px;
-          font-weight: 700;
+          font-weight: bold;
         }
         .q-img, > div .q-img {
           width: 180px;
@@ -136,8 +140,12 @@ const logosPartners = ref([
 
     }
     @media only screen and (max-width: 1200px) {
-        .top {
+      .top {
           .list {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: flex-start;
             > div {
               gap: 10px;
             }
@@ -161,11 +169,6 @@ const logosPartners = ref([
               display: none;
             }
           }
-          .list {
-            display: grid;
-            grid-template-columns: 1fr 1fr; /* Two equal columns in the first row */
-            grid-template-rows: auto auto;
-          }
         }
     }
     @media only screen and (max-width: 768px) {
@@ -178,10 +181,27 @@ const logosPartners = ref([
         }
     }
     @media only screen and (max-width: 600px) {
+      .top {
+        > span {
+          flex-wrap: wrap;
+        }
+        .list {
+          > div {
+            align-items: flex-start;
+            .flex.wrap {
+              flex-direction: column;
+            }
+          }
+        }
+      }
         .bottom {
           .logos-partners {
             grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
             row-gap: 40px;
+            .q-img {
+              max-width: 60%;
+            }
           }
         }
     }

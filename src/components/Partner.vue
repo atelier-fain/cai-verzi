@@ -13,7 +13,7 @@
     </div>
     <q-expansion-item
       dense
-      label="Afla mai multe">
+      label="Află mai multe">
       <q-card>
         <q-card-section v-html="text" />
       </q-card>
@@ -54,12 +54,12 @@ const props = defineProps({
       .q-item {
         .q-item__label {
           font-size: 16px;
-          color: #ff41ff;
+          color: #BEBEBE;
           font-weight: bold;
         }
         .q-icon {
           font-size: 30px;
-          color: #ff41ff;
+          color: #BEBEBE;
         }
       }
     }
@@ -77,12 +77,12 @@ const props = defineProps({
         }
         .q-item__label {
           font-size: 16px;
-          color: #BEBEBE;
+          color: #ff41ff;
           font-weight: bold;
         }
         .q-icon {
           font-size: 30px;
-          color: #BEBEBE;
+          color: #ff41ff;
         }
         .q-item__section--side {
           padding-left: 10px;
@@ -95,6 +95,9 @@ const props = defineProps({
         color: $primary;
         font-size: 18px;
         font-weight: 500;
+        a[href] {
+          color: $primary;
+        }
       }
     }
   }
@@ -110,7 +113,6 @@ const props = defineProps({
   }
   @media only screen and (max-width: 655px) {
     width: 360px;
-
   }
 }
 </style>

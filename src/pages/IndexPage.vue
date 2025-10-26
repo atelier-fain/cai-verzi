@@ -12,12 +12,13 @@
     <div class="s1">
       <div class="container">
         <div>
-          <h1>Cai verzi, cum adică?</h1>
+          <h1>CAI VERZI, cum adică?</h1>
           <p class="text-h3 subtitle">Invenții, plăsmuiri, povești? Da. Ce altceva decât produse ale imaginației admiri pe simezele sau pe scenele instituțiilor culturale?</p>
         </div>
         <div class="middle">
           <p>Te invităm să le descoperi împreună cu elevii tăi de gimnaziu sau liceu (nu la trap, ci la pas ghidat de specialiști), în cadrul Săptămânii Altfel sau al unei ore altfel. Și să devii (dacă nu cumva ești deja) profesorul lor preferat, indiferent de materia pe care o predai. Eliberează-i dintre cei patru pereți ai clasei și fă din mersul la expoziții sau la teatru o experiență exciting!</p>
           <p>Pornim la drum cu ambiția de a aduce 2500 de elevi, în următoarele 2 luni, în instituțiile culturale din Sectorul 1, Capitala Culturală a Capitalei.</p>
+          <p>Dacǎ eşti student, hai dupǎ CAI VERZI pe cont propriu! Iar dacǎ eşti pǎrinte, vino în familie!</p>
         </div>
         <span class="text-h3">Descoperă mai jos traseul și toolurile noastre de plimbare!</span>
       </div>
@@ -27,8 +28,8 @@
       <div class="container">
         <div class="top">
           <div class="text">
-            <h2><span>Unde găsești</span><br><span>Cai Verzi</span></h2>
-            <span class="text-h3 subtitle text-primary">Mai multe despre habitaturile lor culturale, în lista cu partenerii noștri!</span>
+            <h2><span>Unde găsești</span><br><span>CAI VERZI</span></h2>
+            <span class="text-h3 subtitle text-primary">Mai multe despre habitaturile lor culturale, în lista cu partenerii noștri</span>
           </div>
           <div class="map">
             Harta Google Maps
@@ -38,13 +39,13 @@
           <Partner
             v-for="({text}, index) in listPartners"
             :key="`${index}-partner`"
-            :img="`Cal_0${index + 1}.webp`"
+            :img="`Cal_0${index + 1}.svg`"
             :text="text"
           />
         </div>
       </div>
     </div>
-    <div class="s3">
+    <div class="s3" v-if="false">
       <div class="container">
         <q-img
           src="../assets/horse-1.svg"
@@ -52,7 +53,7 @@
           class="left-img"
         />
         <div>
-          <span class="text-h3 text-secondary text-center">Fii la curent cu noi locuri în care poți observa Cai Verzi.</span>
+          <span class="text-h3 text-secondary text-center">Fii la curent cu noi locuri în care poți observa CAI VERZI.</span>
           <span class="text-h3 text-secondary text-center">Abonează-te la newsletter!</span>
           <q-input
             dense
@@ -87,13 +88,13 @@
     </div>
     <div class="s5">
       <div class="container">
-        <div class="top">
+        <div class="top"  v-if="false">
           <div class="text">
-            <h2 class="text-primary">Cai Verzi în mișcare</h2>
-            <span class="text-h3 subtitle text-primary">Vezi cum arată o plimbare pe Cai Verzi pe traseele noastre! </span>
+            <h2 class="text-primary">CAI VERZI în mișcare</h2>
+            <span class="text-h3 subtitle text-primary">Vezi cum arată o plimbare pe traseele noastre! </span>
             <q-btn no-caps flat @click="handleButton('galeria-video')">Galeria video</q-btn>
           </div>
-          <div class="map">
+          <div class="video">
             Video
           </div>
         </div>
@@ -122,11 +123,15 @@
     <div class="s6">
       <div class="container">
         <div class="top">
-          <h2 class="text-secondary text-center">Vânătoare de Cai Verzi</h2>
+          <h2 class="text-secondary text-center">Vânătoare de CAI VERZI</h2>
           <span class="text-h3 text-secondary text-center">Transformă vizita voastră la muzeu într-un treasure hunt. Mai jos găsești o serie de provocări pe care le poți lansa elevilor tăi, adaptate pentru tipul vostru de vizită.</span>
         </div>
         <div class="p-section">
-          <p class="text-center text-secondary">01. Fă o captură de ecran ca să le ai la îndemână. 02. Dă-le provocarea verbal sau sharuieste-o pe grupul de Whatsapp al clasei. 03. Pentru ca jocul să fie și mai palpitant, împarte-i pe grupuri și organizează un concurs.</p>
+          <div>
+            <p class="text-center text-secondary">1. Fă o captură de ecran ca să le ai la îndemână.</p>
+            <p class="text-center text-secondary">2. Dă-le provocarea verbal sau sharuieste-o pe grupul de Whatsapp al clasei.</p>
+            <p class="text-center text-secondary">3. Pentru ca jocul să fie și mai palpitant, împarte-i pe grupuri și organizează un concurs.</p>
+          </div>
           <p class="text-center text-secondary">P.S. Pe cei mai mari îi poți încuraja să își facă și un montaj sau chiar un Insta Story cu experiența lor. Post-vizită le puteți viziona și discuta la clasă!</p>
         </div>
         <div class="list-exp">
@@ -156,7 +161,7 @@
         </div>
         <div class="bottom">
           <h2 class="text-center text-primary">Ești părinte?</h2>
-          <span class="text-h3 text-center text-primary">Ia frâiele în mâini și sugerează profesorilor copilului tău să umble după Cai Verzi în Săptămâna Altfel </span>
+          <span class="text-h3 text-center text-primary">Ia frâiele în mâini și sugerează profesorilor copilului tău să umble după CAI VERZI în Săptămâna Altfel </span>
           <p class="text-center text-primary"> Sau faceți expedițiile și activitățile noastre în familie, oricând aveți
             un weekend în care nu e de stat pe-afară.</p>
         </div>
@@ -191,55 +196,78 @@ const input = ref('')
 const listPartners = ref([
   {
     text: `Șoseaua Pavel D. Kiseleff 1 <br><br>
-           “Unde mergem?” “La Antipaaaa!!!” Destinația “to go” a copiilor de toate vârstele din București și nu numai: peste 2 milioane de exponate culese din toate zonele globului, din Romania și până la ecuator, regiuni polare și chiar de la 6000 de metri sub mari. Căutați aici nu doar unicornul din colecție, ci și spațiul interactiv și activitățile vânate de toți pasionații de științele naturii!<br><br> antipa.ro`
+           Muzeul Național de Istorie Naturală „Grigore Antipa"<br><br>
+           „Unde mergem?" „La Antipaaaa!!!" Destinația „to go" a copiilor de toate vârstele din București și nu numai: peste 2 milioane de exponate culese din toate zonele globului, din Romania și până la ecuator, regiuni polare și chiar de la 6000 de metri sub mari. Căutați aici nu doar unicornul din colecție, ci și spațiul interactiv și activitățile vânate de toți pasionații de științele naturii!<br><br> <a href="https://antipa.ro/" target="_blank">antipa.ro</a>`
   },
   {
-    text: `Calea Victoriei 49-53 <br><br> Rembrandt și Grigorescu, Monet și Luchian, Rodin și Brâncuși și alți artiști pe cai mari se întrec pentru atenția voastră în galeriile de artă europeană și românească, la concurență cu colecția de artă orientală, excelente expoziții temporare şi spațiile cu încărcătură istorică ale fostului Palat Regal. Noi zicem să-i dați bice, cum s-ar zice. Tip: Din circuitul MNAR fac parte și Muzeul Colecțiilor de Artă, Muzeul Theodor Pallady și Muzeul Zambaccian.<br><br> mnar.ro`
+    text: `Calea Victoriei 49-53 <br><br>
+           Muzeul Național de Artă al României<br><br>
+           Rembrandt și Grigorescu, Monet și Luchian, Rodin și Brâncuși și alți artiști pe cai mari se întrec pentru atenția voastră în galeriile de artă europeană și românească, la concurență cu colecția de artă orientală, excelente expoziții temporare şi spațiile cu încărcătură istorică ale fostului Palat Regal. Noi zicem să-i dați bice, cum s-ar zice. Tip: Din circuitul MNAR fac parte și Muzeul Colecțiilor de Artă, Muzeul Theodor Pallady și Muzeul Zambaccian.<br><br> <a href="https://mnar.ro/" target="_blank">mnar.ro</a>`
   },
   {
-    text: `Șoseaua Pavel D. Kiseleff 3<br><br> O colecție unicat de artă etnografică, pe măsura splendidului monument de arhitectură neoromaneascǎ care o găzduiește. Parcursul vostru trece prin săli tematice, de la ceramică și port, la obiecte religioase și expoziții temporare. Atelierele, serile de lectură, concertele și proiecțiile de film merită și ele reținute. Și nu săriți peste o tură prin museum shop!<br><br> muzeultaranuluiroman.ro`
+    text: `Șoseaua Kiseleff 3<br><br>
+           Muzeul Național al Țăranului Român<br><br>
+           O colecție unicat de artă etnografică, pe măsura splendidului monument de arhitectură neoromaneascǎ care o găzduiește. Parcursul vostru trece prin săli tematice, de la ceramică și port, la obiecte religioase și expoziții temporare. Atelierele, serile de lectură, concertele și proiecțiile de film merită și ele reținute. Și nu săriți peste o tură prin museum shop!<br><br> <a href="https://muzeultaranuluiroman.ro/" target="_blank">muzeultaranuluiroman.ro</a>`
   },
   {
-    text: `Bulevardul Primăverii 15<br><br> “Monolitul negru din Primăverii”: primul muzeu de artă privat din Romania pare la prima vedere un imens obstacol. În interior vă așteaptă însă o ascensiune fascinantă de 5 etaje, printre lucrări realizate de peste 250 de nume mari ale artei moderne și contemporane, de la Bernea și Perjovschi, la Long și Pistoletto. Și daca ne permiți să iți șoptim la ureche: aici găsiți cele mai căutate expoziții temporare din București.<br><br> mare.ro`
+    text: `Bulevardul Primăverii 15<br><br>
+           Muzeul de Artă Recentă<br><br>
+           „Monolitul negru din Primăverii": primul muzeu de artă privat din Romania pare la prima vedere un imens obstacol. În interior vă așteaptă însă o ascensiune fascinantă de 5 etaje, printre lucrări realizate de peste 250 de nume mari ale artei moderne și contemporane, de la Bernea și Perjovschi, la Long și Pistoletto. Și daca ne permiți să iți șoptim la ureche: nu ratați sub nicio formă expoziția anului: „Vrea cineva să fie eu?" (INWARD/OUTWARD), solo show-ul lui Dumitru GORZO, unul dintre cei mai importanți artişti români contemporani, aclamați intern şi internațional! Grăbiți-vă: Caii Verzi ai lui GORZO zburdă la MARe doar între 18.09.2025-18.01.2026!<br><br> <a href="https://mare.ro/" target="_blank">mare.ro</a>`
   },
   {
-    text: `Strada Londra 39<br><br> Unul dintre acele locuri în care nu știi la ce să te uiți mai întâi: la clădirea de patrimoniu cu arce gotice și logii venețiene? La plafoanele decorate cu scene mitologice și vitraliile inspirate din heraldică și cartografie? Sau la cele peste 1000 de harți din secolele XVI – XX? Faceți-i înconjurul!<br><br> muzeulhartilor.ro`
+    text: `Strada Londra 39<br><br>
+           Muzeul Național al Harților și Cărții Vechi<br><br>
+           Unul dintre acele locuri în care nu știi la ce să te uiți mai întâi: la clădirea de patrimoniu cu arce gotice și logii venețiene? La plafoanele decorate cu scene mitologice și vitraliile inspirate din heraldică și cartografie? Sau la cele peste 1000 de harți din secolele XVI – XX? Faceți-i înconjurul!<br><br> <a href="https://www.muzeulhartilor.ro/" target="_blank">muzeulhartilor.ro</a>`
   },
   {
-    text: `Bulevardul Nicolae Bălcescu 2<br><br> Ați ajuns la km 0 al Capitalei? Cel mai vizitat teatru din România te întâmpină aici cu 7 spații de joc, 40 de spectacole racordate la prezent, cu regizori de marcă, actori și scenografi din toate generațiile (mai ales din cea mai apropiată de elevii tai!) 170.000 de mii de spectatori fideli iau cu asalt casele de bilete ale Naționalului în fiecare an. Vă alăturați lor?<br><br> tnb.ro`
+    text: `Bulevardul Nicolae Bălcescu 2<br><br>
+           Teatrul Național „I.L.Caragiale"<br><br>
+           Ați ajuns la km 0 al Capitalei? Cel mai vizitat teatru din România te întâmpină aici cu 7 spații de joc, 40 de spectacole racordate la prezent, cu regizori de marcă, actori și scenografi din toate generațiile (mai ales din cea mai apropiată de elevii tai!) 170.000 de mii de spectatori fideli iau cu asalt casele de bilete ale Naționalului în fiecare an. Vă alăturați lor?<br><br> <a href="https://www.tnb.ro/" target="_blank">tnb.ro</a>`
   },
   {
-    text: `Bulevardul Ion C. Brătianu 2<br><br> Fotografie și numismatică, artă, știință și tehnică, textile și tipărituri, obiecte religioase și obiecte de uz casnic: nimic cu adevărat reprezentativ pentru București nu lipsește din colecțiile găzduite de Palatul Suțu și de cele 12 case memoriale și muzee din rețeaua MMR. Un galop prin istoria și viața de acum și de altădată a Capitalei!<br><br> muzeulbucurestiului.ro`
+    text: `Bulevardul Ion C. Brătianu 2<br><br>
+           Muzeul Municipiului București<br><br>
+           Fotografie și numismatică, artă, știință și tehnică, textile și tipărituri, obiecte religioase și obiecte de uz casnic: nimic cu adevărat reprezentativ pentru București nu lipsește din colecțiile găzduite de Palatul Suțu și de cele 12 case memoriale și muzee din rețeaua MMR. Un galop prin istoria și viața de acum și de altădată a Capitalei!<br><br> <a href="https://muzeulbucurestiului.ro/" target="_blank">muzeulbucurestiului.ro</a>`
   },
   {
-    text: `Strada Piața Amzei 13<br><br> Galeria independenta unde vă puteți împrieteni cu o subspecie a cailor verzi: arta contemporană est-europeană. Aici vă paște ocazia de a vă întâlni cu lucrǎri de Roman Tolici, Tara von Neudorf, Lea Razovsky sau Saddo. N-o ratați!<br><br> mare.ro`
+    text: `Strada Piața Amzei 13<br><br>
+           Mobius Gallery<br><br>
+           Galeria independenta unde vă puteți împrieteni cu o subspecie a Cailor Verzi: arta contemporană est-europeană. Aici vă paște ocazia de a vă întâlni cu lucrǎri de Roman Tolici, Tara von Neudorf, Lea Razovsky sau Saddo. N-o ratați!<br><br> <a href="https://www.tnb.ro/" target="_blank">tnb.ro</a>`
   },
   {
-    text: `Piața Presei Libere 1<br><br> N-ați fi zis că galopul vostru prin palate și case de patrimoniu va ajunge la finish în stilulul realist socialist al anilor ’50, nu? Fosta Casă a Scânteii, devenită Casa Presei Libere, se reinventeazǎ astǎzi din nou, într-un spațiu dedicat artei contemporane și evenimentelor culturale. Vă aventurați în labirint?<br><br> scânteia.org/plus/`
+    text: `Piața Presei Libere 1<br><br>
+           Scânteia +<br><br>
+           N-ați fi zis că galopul vostru prin palate și case de patrimoniu va ajunge la finish în stilulul realist socialist al anilor '50, nu? Fosta Casă a Scânteii, devenită Casa Presei Libere, se reinventeazǎ astǎzi din nou, într-un spațiu dedicat artei contemporane și evenimentelor culturale. Vă aventurați în labirint?<br><br> <a href="https://scânteia.org/plus/" target="_blank">scânteia.org/plus/</a>`
   },
   {
-    text: `Strada Piața Amzei 14<br><br> Atenție, trecerea voastră prin Amzei s-ar putea să se transforme într-un luuung popas. Sau poate chiar într-o aventură, odată ce descoperiți acest spatiu populat cu expoziții de arta vizuală și design, proiecte de implicare socială, workshopuri și intervenții menite să îi dea Pieței locul pe care îl merita în peisajul cultural al Bucurestiului. Amzei Creative Corner este parte din Cartierului Creativ, tot o inițiativă THE INSTITUTE. Ne vedem în Amzei!<br><br> cartierulcreativ.ro/amzei`
+    text: `Strada Piața Amzei 13<br><br>
+           Amzei Creative Corner<br><br>
+           Atenție, trecerea voastră prin Amzei s-ar putea să se transforme într-un luuung popas. Sau poate chiar într-o aventură odată ce descoperiți acest spatiu populat cu expoziții de arta vizuală și design, proiecte de implicare socială, workshopuri și intervenții menite să îi dea Pieței locul pe care îl merita în peisajul cultural al Bucurestiului. Amzei Creative Corner este parte din Cartierului Creativ, tot o inițiativă THE INSTITUTE. Ne vedem în Amzei!<br><br> <a href="https://cartierulcreativ.ro/amzei/" target="_blank">cartierulcreativ.ro/amzei</a>`
   },
   {
-    text: `Calea Victoriei 12<br><br> Prrr! Trageți frâiele și trageți-vă sufletul, pentru că ce urmează este o călătorie în timp. De la tezaurul istoric al României și colecția de piese litice până la zona 3D. Salutați pe parcurs și căluții de pe copia Columnei lui Traian!<br><br> mnir.ro`
+    text: `Calea Victoriei 12<br><br>
+           Muzeul Național de Istorie al României<br><br>
+           Prrr! Trageți frâiele și trageți-vă sufletul, pentru că ce urmează este o călătorie în timp. De la tezaurul istoric al României și colecția de piese litice până la zona 3D. Salutați pe parcurs și căluții de pe copia Columnei lui Traian!<br><br> <a href="https://www.mnir.ro/" target="_blank">mnir.ro</a>`
   },
   {
-    text: `Strada C.A. Rosetti 2-4<br><br> Ho, căluț, aici trebuie să ne oprim neapărat! Ați ajuns la una dintre cele mai cunoscute galerii multidisciplinare de artă și design din țară. Un hub privat cu zeci de parteneri naționali și internaționali, implicați în proiecte ca NEO ART CONNECT (NAC), prima anuală de artă și știință din România, CSWeek sau Săptămâna Sustenabilitǎții Creative şi dedicat promovării tinerilor artiști. Spațiul Galateca este unul de referință pentru Bucureşti, semnat de arhitectul Radu Teacă. Îl gǎsiți în buricul oraşului, în clădirea istorică a Bibliotecii Universitare “Carol I”.<br><br> https://www.galateca.ro`
+    text: `Strada C.A. Rosetti 2-4<br><br>
+           Galeria Galateca<br><br>
+           Ho, căluț, aici trebuie să ne oprim neapărat! Ați ajuns la una dintre cele mai cunoscute galerii multidisciplinare de artă și design din țară. Un hub privat cu zeci de parteneri naționali și internaționali, implicați în proiecte ca NEO ART CONNECT (NAC), prima anuală de artă și știință din România, CSWeek sau Săptămâna Sustenabilitǎții Creative şi dedicat promovării tinerilor artiști. Spațiul Galateca este unul de referință pentru Bucureşti, semnat de arhitectul Radu Teacă. Îl gǎsiți în buricul oraşului, în clădirea istorică a Bibliotecii Universitare „Carol I".<br><br> <a href="https://www.galateca.ro/" target="_blank">galateca.ro</a>`
   },
 ])
 const s5_list = ref([
   {
     label: 'Harta fizică',
-    content: `Ce-i în mână, nu-i virtual! <a href="${IMGS_BASE_URL}/CaiVerzi_Harta_A4.pdf" download>Descarcă harta noastră</a> cu spațiile în care puteți lua urma Cailor Verzi. Ce puteți face cu ea: <br><br>
+    content: `Ce-i în mână, nu-i virtual! <a href="https://drive.google.com/drive/u/0/folders/1AGOHvTHfoZjOfkwWlYrrgUZhO2aJLL0S" target="_blank">Descarcă harta noastră</a> cu spațiile în care puteți lua urma Cailor Verzi. Ce puteți face cu ea: <br><br>
      1. Folosiți-o că instrument de orientare sau de planificare a noi excursii culturale. <br><br>
      2. Marcați pe ea locurile pe care le-ați vizitat (cu ștampila de la muzeu, dar merge și cu un sticker, un pin sau cu un cal desenat de o mână talentată). <br><br>
      3. Alternativ, puteți afișă harta în format mare la scoală. Faceți-vă selfie-uri cu ce v-a plăcut mai mult din vizita voastră, printați-le și înfigeți-le cu un pin în hartă.<br><br>
-     4. Puteți organiza și o competiție între elevi sau clase: Cine a văzut mai mulți Cai Verzi?`
+     4. Puteți organiza și o competiție între elevi sau clase: Cine a văzut mai mulți CAI VERZI?`
   },
   {
-    label: 'Colecționează Cai Verzi!',
+    label: 'Colecționează CAI VERZI!',
     content: `Cel mai bun suvenir: un pașaport plin de ștampile! <br><br>
-    1. <a href="${IMGS_BASE_URL}/booklet A6 CaiVerzi DTP tipar.pdf" download>Downloadați-vǎ pasapoartele culturale</a> și printați-le pentru toatǎ clasa! <br><br>
+    1. <a href="${IMGS_BASE_URL}/Pasaport Cultural.pdf" download>Downloadați-vǎ pasapoartele culturale</a> și printați-le pentru toatǎ clasa! <br><br>
     2. Sau spune-le elevilor tai să vină îmbrăcați cu un tricou deschis la culoare (poate fi și o șapcă). <br><br>
     3. La muzeu, teatru, galerie sau casă memoraiala, veți gǎsi o ștampilă cu Calul Verde al fiecărei destinații. <br><br>
     4. Aplicați-o pe pașapoartele voastre sau personalizați-vă cu ea ținuta de explorator cultural! <br><br>
@@ -250,7 +278,7 @@ const s5_list = ref([
     content: `Caii noștri se caută nu doar în colecții, ci și pe traseul vostru până la destinație! <br><br>
     1. Provoacă-ți elevii să-i observe și să-și facă selfie-uri cu caii de pe drum și din expoziții (pot fi statui din oraș, afișe, stenciluri, cai reprezentați în lucrări, orice cal e bun, chiar și unul viu, daca aveți norocul să îl întâlniți!)<br><br>
     2. Printați-le pe cele mai reprezentative (și mai haioase). <br><br>
-    3. Organizați o expoziție Cai Verzi în școală!`
+    3. Organizați o expoziție CAI VERZI în școală!`
   }
 ])
 const s6_list = ref([
@@ -297,36 +325,24 @@ const s6_list = ref([
 const s7_list = ref([
   {
     label: 'Design your horse',
-    content: `Organizați un concurs de postere Cai Verzi la școală. <br> <br>
+    content: `Organizați un concurs de postere CAI VERZI la școală. <br> <br>
               Elevii își pot imagina și crea propriul cal inspirat de
               vizita voastră (orice tehnica arts&craft este permisă:
               desen (fie și tehnic!), pictură, colaj, cusut, fotografie,
               tehnici mixte).<br> <br>
               Îi pot da și un nume și crea o poveste daca vreți să
               faceți și un exercițiu de creative writing.
-              Afișați cei mai reușiți Cai Verzi pe pereții clasei (sau
-              pe hol, că să îi vadă toată școala!)`
+              Afișați cei mai reușiți CAI VERZI pe pereții clasei (sau
+              pe hol, ca să îi vadă toată școala!)`
   },
   {
-    label: 'Muzicǎ de îmblânzit Cai Verzi',
+    label: 'Muzicǎ de îmblânzit CAI VERZI',
     content: `Şi alți nărăvaşi! Deschide un playlist colectiv pe
               Spotify sau pe YouTube. <br> <br>
-              Invită-ți elevii să contribuie cu piese: Ce muzică s-ar
-              potrivi cu vizita noastră? <br> <br>
+              Invită-ți elevii să contribuie cu piese: „Ce muzică s-ar
+              potrivi cu vizita noastră?” <br> <br>
               Ascultați-o și discutați piesele la clasă!`
-  },
-  {
-    label: 'Design your horse',
-    content: `Organizați un concurs de postere Cai Verzi la școală. <br> <br>
-              Elevii își pot imagina și crea propriul cal inspirat de
-              vizita voastră (orice tehnica arts&craft este permisă:
-              desen (fie și tehnic!), pictură, colaj, cusut, fotografie,
-              tehnici mixte).<br> <br>
-              Îi pot da și un nume și crea o poveste daca vreți să
-              faceți și un exercițiu de creative writing.
-              Afișați cei mai reușiți Cai Verzi pe pereții clasei (sau
-              pe hol, că să îi vadă toată școala!)`
-  },
+  }
 ])
 
 function handleSubmit () {
@@ -394,7 +410,7 @@ function handleButton (action) {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 20px;
+        gap: 40px;
         .text {
           h2 {
             color: $primary;
@@ -406,6 +422,7 @@ function handleButton (action) {
         }
         .map {
           width: 100%;
+          max-width: 800px;
           height: 439px;
           background-color: #e3e3e3;
           display: flex;
@@ -416,14 +433,14 @@ function handleButton (action) {
         }
       }
       .list-cards {
-        margin: 100px 0;
+        margin: 100px 0 0 0;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 40px;
       }
     }
-    @media only screen and (max-width: 1650px) {
+    @media only screen and (max-width: 1700px) {
         .container {
           .list-cards {
             justify-content: center;
@@ -530,10 +547,11 @@ function handleButton (action) {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 108px;
+        gap: 40px;
         .text {
-          .text-h1 {
+          > h2 {
             color: $primary;
-            text-align: center;
             margin-bottom: 11px;
           }
           .subtitle {
@@ -551,8 +569,9 @@ function handleButton (action) {
             }
           }
         }
-        .map {
+        .video {
           width: 100%;
+          max-width: 800px;
           height: 439px;
           background-color: #e3e3e3;
           display: flex;
@@ -563,7 +582,6 @@ function handleButton (action) {
         }
       }
       .bottom {
-        margin: 108px 0 0 0;
         > div {
           .text-h3 {
             max-width: 1054px;
@@ -651,10 +669,10 @@ function handleButton (action) {
       }
       .p-section {
         max-width: 1054px;
-        margin: 0 auto 66px 0;
+        margin: 0 auto 66px auto;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 30px;
       }
       .list-exp {
         display: flex;
@@ -690,7 +708,6 @@ function handleButton (action) {
         .list-exp {
           display: flex;
           align-items: flex-start;
-          justify-content: space-between;
           gap: 36px;
         }
       }

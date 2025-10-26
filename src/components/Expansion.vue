@@ -60,6 +60,7 @@ const props = defineProps({
 
 .expansion-comp {
   border-radius: 31px;
+  max-width: 513px;
   width: 100%;
   .q-expansion-item__container {
     .q-expansion-item__content > .q-card {
@@ -68,6 +69,7 @@ const props = defineProps({
         font-size: 18px;
         font-weight: 500;
         padding-bottom: 48px;
+        text-align: center;
       }
     }
     .q-item:hover .q-focus-helper {
@@ -75,6 +77,7 @@ const props = defineProps({
     }
     .q-item {
       justify-content: center;
+      height: 99px;
       .q-icon {
         font-size: 40px;
       }
@@ -84,6 +87,7 @@ const props = defineProps({
       .q-item__label {
         font-size: 28px;
         font-weight: bold;
+        text-align: center;
       }
     }
   }
@@ -95,6 +99,7 @@ const props = defineProps({
         }
       }
       .q-item {
+        height: 60px;
         .q-icon {
           font-size: 28px;
         }
