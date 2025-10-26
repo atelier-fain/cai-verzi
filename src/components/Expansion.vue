@@ -99,7 +99,7 @@ const props = defineProps({
         }
       }
       .q-item {
-        height: 60px;
+        height: 50px;
         .q-icon {
           font-size: 28px;
         }
@@ -112,6 +112,7 @@ const props = defineProps({
 
   }
   @media only screen and (max-width: 768px) {
+    max-width: unset;
     .q-expansion-item__container {
       .q-expansion-item__content > .q-card {
         .q-card__section {
@@ -119,7 +120,6 @@ const props = defineProps({
         }
       }
       .q-item {
-        justify-content: space-between;
         .q-icon {
           font-size: 20px;
         }
