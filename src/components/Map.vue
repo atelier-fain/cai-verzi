@@ -6,7 +6,7 @@
 
 <script setup>
 import {onMounted, ref} from 'vue'
-import {IMGS_BASE_URL} from "/src/boot/axios.js";
+import {IMGS_BASE_URL} from "../boot/axios.js";
 
 // Props pentru a primi institutiile din component
 const props = defineProps({
@@ -185,7 +185,7 @@ const customIcon = {
   anchor: new window.google.maps.Point(17, 53)
 }
 
-const initMap = () => {
+function initMap () {
   // Inițializez harta
   map.value = new window.google.maps.Map(document.getElementById('map'), {
     center: {lat: 45.9432, lng: 24.9668},
@@ -273,8 +273,7 @@ const initMap = () => {
 onMounted(() => {
   // Mă asigur că Google Maps este încărcat
   if (window.google && window.google.maps) {
-    console.log(window.google)
-    // initMap()
+    initMap()
   } else {
     console.error('Google Maps API nu este încărcat')
   }
