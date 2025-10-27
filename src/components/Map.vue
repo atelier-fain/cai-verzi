@@ -273,7 +273,8 @@ const initMap = () => {
 onMounted(() => {
   // Mă asigur că Google Maps este încărcat
   if (window.google && window.google.maps) {
-    initMap()
+    console.log(window.google)
+    // initMap()
   } else {
     console.error('Google Maps API nu este încărcat')
   }
