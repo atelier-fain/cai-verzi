@@ -47,18 +47,18 @@ import { IMGS_BASE_URL } from '../boot/axios.js';
 import {ref} from 'vue'
 
 const logosPartners = ref([
-  "Galateca.svg",
-  "Group 562.svg",
-  "Layer_1.svg",
-  "logo MNIR.svg",
-  "logo MOBIUS alb-negru.svg",
-  "logo_MNAR_curbe_rosu bloc fara fundal.svg",
-  "logo_romana.svg",
-  "logo-mmb.svg",
-  "logo-muzeul-taranului-roman.svg",
-  "Logo.svg",
-  "MNHCV-LOGO-20-ani_BLACK-Lung-copy-2 copy.svg",
-  "TTTT_CC_AMZEI_NEGRU.svg"
+  'logo-muzeul-taranului-roman.svg',
+  'logo-mmb.svg',
+  'logo_MNAR.svg',
+  'TTTT_CC_AMZEI_NEGRU.svg',
+  'logo-mnir-vector.svg',
+  'Logo Antipa.svg',
+  'Group_545.svg',
+  'Logo Galateca.svg',
+  'Logo MARe.svg',
+  'Logo.svg',
+  'Logo Mobius.svg',
+  'AS3UPg.svg',
 ])
 </script>
 
