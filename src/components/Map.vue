@@ -235,7 +235,7 @@ function initMap () {
     }
 
     const contentString = `
-      <div style="font-family: 'Inter Tight', sans-serif;; max-width: 280px; padding-bottom: 5px;">
+      <div style="font-family: 'Inter Tight', sans-serif; max-width: 280px; padding-bottom: 5px;">
         ${infoContentParts.join('')}
       </div>
     `
@@ -285,6 +285,7 @@ onMounted(() => {
   width: 100%;
   max-width: 836px;
   height: 100%;
+  border: 2px dashed #00ca7247;
 }
 
 #map {
