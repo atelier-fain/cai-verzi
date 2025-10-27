@@ -1,6 +1,6 @@
 <template>
-  <div className="map-container">
-    <div id="map" className="map"></div>
+  <div class="map-container">
+    <div id="map" class="map"></div>
   </div>
 </template>
 
@@ -280,7 +280,7 @@ onMounted(() => {
 })
 </script>
 
-<style scoped>
+<style lang="scss">
 .map-container {
   width: 100%;
   max-width: 836px;

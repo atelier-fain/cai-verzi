@@ -31,7 +31,7 @@
             <h2><span>Unde găsești</span><br><span>CAI VERZI</span></h2>
             <span class="text-h3 subtitle text-primary">Mai multe despre habitaturile lor culturale, în lista cu partenerii noștri</span>
           </div>
-          <Map :institutii="institutii" />
+<!--          <Map :institutii="institutii" />-->
         </div>
         <div class="list-cards">
           <Partner
