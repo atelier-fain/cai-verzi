@@ -31,9 +31,7 @@
             <h2><span>Unde găsești</span><br><span>CAI VERZI</span></h2>
             <span class="text-h3 subtitle text-primary">Mai multe despre habitaturile lor culturale, în lista cu partenerii noștri</span>
           </div>
-          <div class="map">
-            Harta Google Maps
-          </div>
+          <Map :institutii="institutii" />
         </div>
         <div class="list-cards">
           <Partner
@@ -186,6 +184,7 @@
 </template>
 
 <script setup>
+import Map from 'components/Map.vue';
 import Partner from 'components/Partner.vue';
 import {ref} from "vue";
 import Expansion from 'components/Expansion.vue';
@@ -344,7 +343,121 @@ const s7_list = ref([
               Ascultați-o și discutați piesele la clasă!`
   }
 ])
+const institutii = [
+  {
+    nume: 'Muzeul Național de Istorie Naturală "Grigore Antipa"',
+    adresa: 'Șos. Kiseleff nr. 1, Sector 1, 011341, București',
+    website: 'https://antipa.ro/info-utile/contact/',
+    latitudine: 44.45324954088294,
+    longitudine: 26.084598568131913
+  },
+  {
+    nume: 'Muzeul Național de Artă al României (MNAR)',
+    adresa: 'Calea Victoriei 49-53, Sector 1, 010063, București',
+    website: 'https://mnar.ro/contact',
+    latitudine: 44.439960234770105,
+    longitudine: 26.09575382580153,
+  },
+  {
+    nume: 'Muzeul Național al Țăranului Român',
+    adresa: 'Șoseaua Pavel Dimitrievici Kiseleff nr. 3, Sector 1, București',
+    website: 'https://muzeultaranuluiroman.ro/',
+    latitudine: 44.454558070852414,
+    longitudine:  26.083794668131965,
+  },
+  {
+    nume: 'Muzeul "Theodor Aman"',
+    adresa: 'Str. C.A. Rosetti nr. 8, Sector 1, București',
+    website: 'https://muzeulburestiului.ro/muzeu-theodor-aman.html',
+    latitudine: 44.44039471440919,
+    longitudine: 26.098147154636745
+  },
+  {
+    nume: 'MAre - Muzeul de Artă Recentă',
+    adresa: 'Bulevardul Primăverii 15, Sector 1, București',
+    website: 'https://mare.ro/contact/',
+    latitudine: 44.46797371539993,
+    longitudine: 26.089099841143433
+  },
+  {
+    nume: 'Muzeul Național al Hărților și Cărții Vechi',
+    adresa: 'Str. Londra 39, Sector 1, 011762, bucurești',
+    website: 'https://www.muzeulhartilor.ro/contact-us/',
+    latitudine: 44.45709843078777,
+    longitudine: 26.09270536813213
+  },
+  {
+    nume: 'Muzeul Municipiului București',
+    adresa: 'Bd. I.C. Brătianu, nr. 2, sector 3, București',
+    website: 'https://muzeulburestiului.ro/contact.html',
+    latitudine:   44.434997265313044,
+    longitudine: 26.102272208709568
+  },
+  {
+    nume: 'Casa Filipescu-Cesianu',
+    adresa: 'Calea Victoriei nr. 151, Sector 1, București',
+    website: 'https://muzeulburestiului.ro/casa-filipescu-cesianu.html',
+    latitudine: 44.45047947156158,
+    longitudine: 26.087254196966935
+  },
+  {
+    nume: 'Muzeul Nicolaie Minovici de Artă Populară',
+    adresa: 'Str. Doctor Nicolaie Minovici nr. 1, București',
+    website: 'https://muzeulburestiului.ro/muzeu-nicolaie-minovici.html',
+    latitudine: 44.484442567866836,
+    longitudine: 26.075189995122642
+  },
+  {
+    nume: 'Teatrul Național "Ion Luca Caragiale" (TNB)',
+    adresa: 'Bulevardul Nicolaie Bălcescu nr. 2, Sector 1, București',
+    website: 'https://www.tnb.ro/ro/contacte-utile',
+    latitudine: 44.43723292228526,
+    longitudine: 26.103873812306865
+  },
+  {
+    nume: 'Mobius Gallery',
+    adresa: 'Strada Alexandru Iacovachi 16, Sector 1, București',
+    website: 'https://www.mobius-gallery.com/',
+    latitudine: 44.435556,
+    longitudine: 26.095000
+  },
+  {
+    nume: 'Galeria Galateca',
+    adresa: 'Str. C.A. Rosetti nr. 2-4, Sector 1, București',
+    website: 'https://www.galateca.ro/contact.html',
+    latitudine: 44.44022413525078,
+    longitudine: 26.097510368131353
+  },
+  {
+    nume: 'Scânteia +',
+    adresa: 'Casa Presei Libere, Bulevardul Știrbei Vodă, Sector 1, București',
+    website: 'https://linktr.ee/scanteia_plus',
+    latitudine: 44.48106846755542,
+    longitudine: 26.07118449980036
+  },
+  {
+    nume: 'Amzei Creative Corner',
+    adresa: 'Piața Amzei 13, Sector 1, București',
+    website: 'https://cartierulcreativ.ro/amzei/',
+    latitudine: 44.44418050497812,
+    longitudine: 26.09509601046127
+  },
 
+  {
+    nume: 'Muzeul Național de Istorie a României',
+    adresa: 'Calea Victoriei 12, Sector 3, 030026, București',
+    website: 'https://www.mnir.ro/',
+    latitudine: 44.43273350064687,
+    longitudine: 26.097619881625555
+  }
+
+
+
+
+]
+
+const raw = ref([
+])
 function handleSubmit () {
 
 }
@@ -422,14 +535,6 @@ function handleButton (action) {
         }
         .map {
           width: 100%;
-          max-width: 800px;
-          height: 439px;
-          background-color: #e3e3e3;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: grey;
-          font-size: 40px;
         }
       }
       .list-cards {
