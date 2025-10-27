@@ -6,6 +6,7 @@
 
 <script setup>
 import {onMounted, ref} from 'vue'
+import {IMGS_BASE_URL} from "/src/boot/axios.js";
 
 // Props pentru a primi institutiile din component
 const props = defineProps({
@@ -179,7 +180,7 @@ const customMapStyle = [
 ]
 
 const customIcon = {
-  url: '/pin.svg',
+  url: `${IMGS_BASE_URL}/pin.svg`,
   scaledSize: new window.google.maps.Size(34, 53),
   anchor: new window.google.maps.Point(17, 53)
 }
