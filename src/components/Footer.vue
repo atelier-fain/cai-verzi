@@ -118,6 +118,9 @@ const logosPartners = ref([
       .logos-partners > div:nth-child(2) {
         width: 300%;
       }
+      .logos-partners > div:nth-child(1) {
+        height: 70px;
+      }
       .logos-partners {
         width: 100%;
         display: flex;
@@ -168,9 +171,12 @@ const logosPartners = ref([
         .logos-partners {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr 1fr;
+          > div {
+            width: 120px;
+          }
         }
         .logos-partners > div:nth-child(2) {
-          width: 250px;
+          width: 100%;
         }
       }
     }
@@ -190,9 +196,28 @@ const logosPartners = ref([
     @media only screen and (max-width: 768px) {
         .top {
           gap: 40px;
+          > span {
+            width: 100%;
+            justify-content: center;
+          }
           .list {
-            grid-template-columns: 1fr;
+            justify-content: center;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            margin: 0 auto;
             gap: 40px;
+            > div {
+              flex-direction: column;
+              align-items: center;
+            }
+          }
+        }
+        .bottom {
+          .logos-partners {
+            justify-items: center;
+          }
+          > span {
+            margin: 0 auto;
           }
         }
     }
@@ -203,7 +228,6 @@ const logosPartners = ref([
         }
         .list {
           > div {
-            align-items: flex-start;
             .flex.wrap {
               flex-direction: column;
             }
@@ -211,9 +235,6 @@ const logosPartners = ref([
         }
       }
         .bottom {
-          .logos-partners > div:nth-child(2) {
-            width: unset;
-          }
           .logos-partners {
             grid-template-columns: 1fr 1fr;
             grid-template-rows: auto auto;

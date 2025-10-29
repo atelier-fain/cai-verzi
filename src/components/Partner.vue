@@ -41,6 +41,7 @@ const props = defineProps({
     justify-content: center;
     .q-img {
       mix-blend-mode: multiply;
+      max-width: 360px;
     }
     .border-card {
       width: 100%;

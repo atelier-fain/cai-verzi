@@ -104,7 +104,7 @@
         <div class="bottom">
           <div>
             <h2 class="text-primary text-center">Resurse & activități</h2>
-            <span class="text-h3 text-center text-primary">Aici găsești idei pentru cum poți transforma “mersul la muzeu” într-o experiențǎ căutată de elevii tăi.</span>
+            <span class="text-h3 text-center text-primary">Aici găsești idei pentru cum poți transforma „mersul la muzeu” într-o experiențǎ căutată de elevii tăi.</span>
           </div>
           <div class="exp-section">
             <span class="text-h1 text-center text-primary">În vizită</span>
@@ -596,7 +596,6 @@ function handleButton (action) {
         .list-cards {
           gap: 40px;
           margin: 60px 0;
-          grid-template-columns: 1fr 1fr;
           justify-items: center;
         }
       }
@@ -839,7 +838,8 @@ function handleButton (action) {
         }
         .list-exp {
           display: flex;
-          align-items: flex-start;
+          align-items: center;
+          justify-content: center;
           gap: 36px;
         }
       }
