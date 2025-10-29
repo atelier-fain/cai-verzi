@@ -29,12 +29,14 @@
       <div class="bottom">
         <span>Parteneri Instituționali</span>
         <div class="logos-partners">
-          <q-img
-            v-for="img in logosPartners"
-            :key="img"
-            :src="`${IMGS_BASE_URL}/${img}`"
-            :alt="img"
-          />
+          <div v-for="img in logosPartners"
+               :key="img">
+            <q-img
+              :src="`${IMGS_BASE_URL}/${img}`"
+              :alt="img"
+            />
+          </div>
+
         </div>
       </div>
     </div>
@@ -101,7 +103,6 @@ const logosPartners = ref([
           display: flex;
           align-items: center;
           gap: 20px;
-
         }
       }
     }
@@ -114,15 +115,27 @@ const logosPartners = ref([
         font-weight: 700;
         white-space: nowrap;
       }
+      .logos-partners > div:nth-child(2) {
+        width: 300%;
+      }
       .logos-partners {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 20px;
-
-        .q-img {
-          max-width: 100px;
+        > div {
+          width: 100%;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          padding: 10px;
+          .q-img {
+            width: 100%;
+            height: 100%;
+            img {
+              object-fit: contain !important;
+            }
+          }
         }
       }
     }
@@ -155,6 +168,9 @@ const logosPartners = ref([
         .logos-partners {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        .logos-partners > div:nth-child(2) {
+          width: 250px;
         }
       }
     }
@@ -195,13 +211,13 @@ const logosPartners = ref([
         }
       }
         .bottom {
+          .logos-partners > div:nth-child(2) {
+            width: unset;
+          }
           .logos-partners {
             grid-template-columns: 1fr 1fr;
             grid-template-rows: auto auto;
-            row-gap: 40px;
-            .q-img {
-              max-width: 60%;
-            }
+            row-gap: 20px;
           }
         }
     }

@@ -39,6 +39,9 @@ const props = defineProps({
     display: flex;
     align-items: center;
     justify-content: center;
+    .q-img {
+      mix-blend-mode: multiply;
+    }
     .border-card {
       width: 100%;
       height: 100%;

@@ -3,8 +3,13 @@
     <div class="hero">
       <div class="container">
         <q-img
-          class="hero-img"
-          src="../assets/hero-img.svg"
+          class="hero-img desktop"
+          :src="`${IMGS_BASE_URL}/CaiVerzi_Header_Desktop.svg`"
+          alt="img horse"
+        />
+        <q-img
+          class="hero-img mobile"
+          :src="`${IMGS_BASE_URL}/CaiVerzi_Header_Mobil.svg`"
           alt="img horse"
         />
       </div>
@@ -291,7 +296,8 @@ const s6_list = ref([
     6. Identifică 3 materiale folosite de artist în aceastǎ lucrare. De ce crezi că a optat pentru ele? <br><br>
     7. Ce obiect din expoziție ți-ar plăcea să ai în camera ta? <br><br>
     8. Fă o poză cu un personaj care se uită în ochii tăi. Capturează legătură dintre voi! (Ai reținut: fară blitz!) <br><br>
-    9. Ce s-a întâmplat cu 5 minute de scena aceasta? Dar după? 10. Găsește o lucrare care iți amintește de o experiență personală!`
+    9. Ce s-a întâmplat cu 5 minute de scena aceasta? Dar după? <br><br>
+    10. Găsește o lucrare care iți amintește de o experiență personală!`
   },
   {
     label: 'La teatru',
@@ -471,6 +477,27 @@ function handleButton (action) {
 
 <style lang="scss">
 .homepage {
+  .hero {
+    margin: 20px 0 37px 0;
+    .container {
+      .mobile {
+        display: none;
+        max-width: 80%;
+        margin: 0 auto;
+      }
+    }
+    @media only screen and (max-width: 768px) {
+      margin: 20px 0;
+      .container {
+        .desktop {
+          display: none;
+        }
+        .mobile {
+          display: block;
+        }
+      }
+    }
+  }
   .s1 {
     background-color: #00CA72;
     padding: 50px;
